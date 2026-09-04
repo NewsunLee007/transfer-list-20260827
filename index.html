@@ -7,145 +7,97 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
-    background: #f0f2f5;
-    color: #444;
-    line-height: 1.75;
-    padding: 40px 16px;
+    font-family: "FangSong", "仿宋", "STFangsong", "FangSong_GB2312", "Microsoft YaHei", serif;
+    background: #ffffff; color: #000; line-height: 1.9; padding: 20px 16px; font-size: 16px;
   }
-  .card {
-    max-width: 760px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 14px;
-    padding: 48px 52px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  .doc { max-width: 760px; margin: 0 auto; background: #ffffff; padding: 30px 48px 50px; }
+  .doc-title {
+    text-align: center;
+    font-family: "FZXiaoBiaoSong-B05S", "方正小标宋_GBK", "STZhongsong", "SimSun", "宋体", serif;
+    font-size: 22px; font-weight: bold; color: #000; line-height: 1.5; margin-bottom: 6px; letter-spacing: 1px;
   }
-  .header { text-align: center; margin-bottom: 8px; }
-  .header h1 {
-    font-size: 24px;
-    color: #1a1a2e;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    margin-bottom: 14px;
+  .doc-sub { text-align: center; font-family: "FangSong", "仿宋", serif; font-size: 14px; color: #333; margin-bottom: 24px; }
+  .lead { font-size: 16px; text-indent: 2em; margin-bottom: 18px; }
+  h2.section {
+    font-family: "SimHei", "黑体", "Microsoft YaHei", sans-serif;
+    font-size: 16px; font-weight: bold; color: #000; margin-top: 20px; margin-bottom: 10px; text-indent: 2em;
   }
-  .header .divider {
-    width: 72px; height: 3px; background: #3B6FD4;
-    border-radius: 2px; margin: 0 auto 18px;
-  }
-  .header .meta { font-size: 14px; color: #888; letter-spacing: 0.5px; }
-  .section { margin-top: 30px; }
-  .section-title {
-    font-size: 17px; color: #1a1a2e; font-weight: 700;
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 14px; padding-bottom: 8px;
-    border-bottom: 1px solid #e8ebf1;
-  }
-  .section-title .num {
-    display: inline-block; width: 26px; height: 26px; line-height: 26px;
-    text-align: center; background: #3B6FD4; color: #fff;
-    border-radius: 6px; font-size: 14px; flex-shrink: 0;
-  }
-  p { font-size: 15px; margin-bottom: 10px; }
-  .hl { color: #D43D3D; font-weight: 700; }
-  table {
-    width: 100%; border-collapse: collapse;
-    margin: 10px 0 6px; border-radius: 10px; overflow: hidden; font-size: 15px;
-  }
-  table thead th {
-    background: #3B6FD4; color: #fff; font-weight: 600;
-    padding: 11px 8px; text-align: center;
-  }
-  table tbody td {
-    padding: 11px 8px; text-align: center;
-    border-bottom: 1px solid #eef0f5;
-  }
-  table tbody tr:nth-child(even) { background: #f7f9fc; }
-  table tbody tr:last-child td { border-bottom: none; }
-  .tip {
-    background: #f0f6ff; border-left: 4px solid #3B6FD4;
-    padding: 14px 16px; border-radius: 6px; margin: 14px 0;
-  }
-  .tip p { font-size: 14px; color: #44546a; margin-bottom: 4px; }
-  .footer {
-    margin-top: 40px; padding-top: 18px; border-top: 1px solid #e8ebf1;
-    text-align: right; font-size: 15px; color: #1a1a2e;
-  }
-  .footer .org { font-weight: 600; margin-bottom: 4px; }
-  .footer .date { color: #666; }
+  p { font-size: 16px; text-indent: 2em; margin-bottom: 6px; color: #000; }
+  table { width: 92%; margin: 8px auto 14px; border-collapse: collapse; font-size: 15px; font-family: "FangSong", "仿宋", serif; }
+  table th, table td { border: 1px solid #000; padding: 7px 4px; text-align: center; line-height: 1.5; }
+  table th { font-family: "SimHei", "黑体", sans-serif; font-weight: bold; background: #f5f5f5; }
+  .red { color: #c00000; font-weight: bold; }
+  .tip-box { border: 1px solid #c00000; padding: 10px 14px; margin: 14px 2em; background: #fff8f8; font-size: 15px; color: #333; }
+  .tip-box p { text-indent: 0; margin-bottom: 2px; font-size: 15px; }
+  .footer { margin-top: 36px; text-align: right; font-size: 16px; line-height: 1.9; }
+  .footer .org { font-weight: normal; }
+  .footer .date { margin-top: 2px; }
   @media (max-width: 600px) {
-    .card { padding: 32px 22px; }
-    .header h1 { font-size: 20px; }
+    .doc { padding: 24px 18px 30px; }
+    .doc-title { font-size: 19px; }
+    table { font-size: 13px; }
   }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="header">
-    <h1>关于2024级、2025级<br>转学申请学生名单的公示</h1>
-    <div class="divider"></div>
-    <div class="meta">瑞安市新纪元实验学校 · 2026年8月27日发布</div>
-  </div>
+<div class="doc">
 
-  <p>各位家长：</p>
-  <p>根据我校2026年8月22日发布的《关于公布2024级、2025级空余学位及受理转学申请的公告》，截至<span class="hl">2026年8月27日</span>，共收到 <span class="hl">25</span> 名学生提出转学申请，现将名单公示如下：</p>
+  <div class="doc-title">关于2024级、2025级转学申请学生名单的公示</div>
+  <div class="doc-sub">瑞安市新纪元实验学校　　2026年8月27日</div>
 
-  <div class="section">
-    <div class="section-title"><span class="num">一</span>拟转入八年级学生名单（2025级，共 13 人）</div>
-    <table>
-      <thead><tr><th style="width:80px;">序号</th><th>姓名</th><th>性别</th></tr></thead>
-      <tbody>
-<tr><td>1</td><td>李逸梣</td><td>男</td></tr>
-<tr><td>2</td><td>应俊皓</td><td>男</td></tr>
-<tr><td>3</td><td>陈安帅</td><td>男</td></tr>
-<tr><td>4</td><td>施依荨</td><td>女</td></tr>
-<tr><td>5</td><td>林乐佳</td><td>女</td></tr>
-<tr><td>6</td><td>许哲豪</td><td>男</td></tr>
-<tr><td>7</td><td>金鑫磊</td><td>男</td></tr>
-<tr><td>8</td><td>郑心怡</td><td>女</td></tr>
-<tr><td>9</td><td>吴骐丞</td><td>男</td></tr>
-<tr><td>10</td><td>林畅</td><td>女</td></tr>
-<tr><td>11</td><td>陈爽</td><td>女</td></tr>
-<tr><td>12</td><td>黄驰骋</td><td>女</td></tr>
-<tr><td>13</td><td>徐彦学</td><td>女</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <p class="lead">根据我校2026年8月22日发布的《关于公布2024级、2025级空余学位及受理转学申请的公告》，截至2026年8月27日，共收到 <span class="red">25</span> 名学生提出转学申请，现将名单公示如下：</p>
 
-  <div class="section">
-    <div class="section-title"><span class="num">二</span>拟转入九年级学生名单（2024级，共 12 人）</div>
-    <table>
-      <thead><tr><th style="width:80px;">序号</th><th>姓名</th><th>性别</th></tr></thead>
-      <tbody>
-<tr><td>1</td><td>徐珑依</td><td>女</td></tr>
-<tr><td>2</td><td>孙一菲</td><td>女</td></tr>
-<tr><td>3</td><td>颜语</td><td>男</td></tr>
-<tr><td>4</td><td>阮煜恺</td><td>男</td></tr>
-<tr><td>5</td><td>蔡书逸</td><td>男</td></tr>
-<tr><td>6</td><td>陈奕伲</td><td>女</td></tr>
-<tr><td>7</td><td>林珑</td><td>女</td></tr>
-<tr><td>8</td><td>张一然</td><td>女</td></tr>
-<tr><td>9</td><td>宋浩源</td><td>男</td></tr>
-<tr><td>10</td><td>陈欣怡</td><td>女</td></tr>
-<tr><td>11</td><td>曾雯柯</td><td>女</td></tr>
-<tr><td>12</td><td>池承翰</td><td>男</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <h2 class="section">一、拟转入八年级学生名单（2025级，共 13 人）</h2>
+  <table>
+    <thead><tr><th style="width:56px;">序号</th><th>姓名</th><th>性别</th><th>身份证号</th></tr></thead>
+    <tbody>
+<tr><td>1</td><td>李*梣</td><td>男</td><td>411************257</td></tr>
+<tr><td>2</td><td>应*皓</td><td>男</td><td>330************616</td></tr>
+<tr><td>3</td><td>陈*帅</td><td>男</td><td>330************11X</td></tr>
+<tr><td>4</td><td>施*荨</td><td>女</td><td>330************426</td></tr>
+<tr><td>5</td><td>林*佳</td><td>女</td><td>330************929</td></tr>
+<tr><td>6</td><td>许*豪</td><td>男</td><td>330************135</td></tr>
+<tr><td>7</td><td>金*磊</td><td>男</td><td>330************838</td></tr>
+<tr><td>8</td><td>郑*怡</td><td>女</td><td>330************427</td></tr>
+<tr><td>9</td><td>吴*丞</td><td>男</td><td>330************635</td></tr>
+<tr><td>10</td><td>林*</td><td>女</td><td>330************780</td></tr>
+<tr><td>11</td><td>陈*</td><td>女</td><td>330************645</td></tr>
+<tr><td>12</td><td>黄*骋</td><td>女</td><td>330************623</td></tr>
+<tr><td>13</td><td>徐*学</td><td>女</td><td>330************623</td></tr>
+    </tbody>
+  </table>
 
-  <div class="section">
-    <div class="section-title"><span class="num">三</span>说明</div>
-    <div class="tip">
-      <p>1. 本名单为在规定时间内正式提出转学申请的学生名单。</p>
-      <p>2. 最终转入结果以学校后续公示为准。</p>
-      <p>3. 如对名单有异议，请及时联系学校教务处咨询。</p>
-    </div>
+  <h2 class="section">二、拟转入九年级学生名单（2024级，共 12 人）</h2>
+  <table>
+    <thead><tr><th style="width:56px;">序号</th><th>姓名</th><th>性别</th><th>身份证号</th></tr></thead>
+    <tbody>
+<tr><td>1</td><td>徐*依</td><td>女</td><td>330************32X</td></tr>
+<tr><td>2</td><td>孙*菲</td><td>女</td><td>210************660</td></tr>
+<tr><td>3</td><td>颜*</td><td>男</td><td>361************211</td></tr>
+<tr><td>4</td><td>阮*恺</td><td>男</td><td>330************611</td></tr>
+<tr><td>5</td><td>蔡*逸</td><td>男</td><td>330************515</td></tr>
+<tr><td>6</td><td>陈*伲</td><td>女</td><td>330************922</td></tr>
+<tr><td>7</td><td>林*</td><td>女</td><td>330************488</td></tr>
+<tr><td>8</td><td>张*然</td><td>女</td><td>330************924</td></tr>
+<tr><td>9</td><td>宋*源</td><td>男</td><td>421************137</td></tr>
+<tr><td>10</td><td>陈*怡</td><td>女</td><td>S53****(7)</td></tr>
+<tr><td>11</td><td>曾*柯</td><td>女</td><td>430************267</td></tr>
+<tr><td>12</td><td>池*翰</td><td>男</td><td>330************910</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">三、说明</h2>
+  <div class="tip-box">
+<p>1. 本名单为在规定时间内正式提出转学申请的学生名单。</p>
+<p>2. 最终转入结果以学校后续公示为准。</p>
+<p>3. 为保护学生隐私，姓名及身份证号码已作部分隐藏处理。</p>
   </div>
 
   <div class="footer">
     <div class="org">瑞安市新纪元实验学校</div>
     <div class="date">2026年8月27日</div>
   </div>
+
 </div>
 </body>
 </html>
